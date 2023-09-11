@@ -1,0 +1,29 @@
+mat-spinner{
+  margin: 10rem auto;
+}
+
+
+.post-image{
+  width: 100%;
+
+}
+
+.post-image img{
+  height: 25rem;
+  width: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+h3 {
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+p{
+  padding: 1rem;
+}
+
+mat-action-row span{
+  align-self: center;
+}

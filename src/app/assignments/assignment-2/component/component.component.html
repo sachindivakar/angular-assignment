@@ -1,0 +1,39 @@
+<form [formGroup]="form" (submit)="handleSubmit()" >
+
+  <div class="form-control">
+    <label for="email">Email</label>
+    <input type="email" formControlName="email" />
+  </div>
+
+
+  <div class="form-control">
+    <label for="password">ppassword</label>
+    <input type="password"  formControlName="password" />
+  </div>
+
+  <div class="form-control">
+    <label for="confirmPassword" >confirm password</label>
+    <input type="password"  formControlName="confirmPassword" name="confirmPassword"/>
+  </div>
+
+  <div class="form-control">
+    <label for="email">Gender</label>
+    <select   name="gender" formControlName="gender">
+      <option *ngFor="let gender of genders" [ngValue]="gender">{{gender}}</option>
+    </select>
+
+  </div>
+  <div class="form-control">
+    <input type="checkbox" formControlName="accept"/>
+    <label for="email">Accept</label>
+
+  </div>
+
+  <div class="form-control">
+      {{this.form.get('accept')?.value}}
+    <input type="button" value="cancel" (click)="onCancel()"/>
+    <input type="submit" name="cancel" value="submit" [disabled]="this.form.invalid || this.form.get('accept')?.value === false" />
+  </div>
+
+
+</form>
