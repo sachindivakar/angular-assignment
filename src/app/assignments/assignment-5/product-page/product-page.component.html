@@ -1,0 +1,9 @@
+
+
+<app-product-component-5 [title]="title" (productAdded)="onProductAdded($event)"></app-product-component-5>
+
+<div *ngIf="recentlyAddedProduct">
+  <h2>Recently Added Product</h2>
+  <p>Name: {{ recentlyAddedProduct.name }}</p>
+  <p>Quantity: {{ recentlyAddedProduct.quantity }}</p>
+</div>

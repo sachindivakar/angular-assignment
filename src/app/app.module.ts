@@ -12,29 +12,37 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PostCreateComponent} from './posts/post-create/post-create.component';
 
-import { HeaderComponent } from './header/header.component';
-import { PostListComponent } from './posts/post-list/post-list.component'
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
-import { SignupComponent } from './auth/signup/signup.component';
-import { LoginComponent } from './auth/login/login.component';
-import { AuthInterceptor } from './auth.interceptor';
+
 import { ModuleAModule } from './assignments/assignment-1/module-a/module-a.module';
 import { ComponentComponent as AssignmentTwo} from './assignments/assignment-2/component/component.component';
 import { ComponentComponent as AssignmentThree } from './assignments/assignment-3/component/component.component';
-import { ProductComponentComponent } from './assignments/assignment-4/product-component/product-component.component';
+import { ProductComponentComponent as ProductComponentAssignment4} from './assignments/assignment-4/product-component/product-component.component';
+import { ProductComponentComponent as ProductComponentAssignment5} from './assignments/assignment-5/product-component/product-component.component';
+import { ProductPageComponent } from './assignments/assignment-5/product-page/product-page.component';
+import { AssignmentsComponent } from './assignments/assignments.component';
+import { ProductPageComponent6 as ProductPageAssignmentSix } from './assignments/assignment-6/product-page/product-page.component';
+import { ProductComponent6 as ProductComponentAssignmentSix } from './assignments/assignment-6/product/product.component';
+import { ProductComponent } from './assignments/assignment-7/product/product.component';
+import { ProductDetailsComponent } from './assignments/assignment-7/product-details/product-details.component';
+import { AboutComponent } from './assignments/assignment-7/about/about.component';
+import { HeaderComponent } from './assignments/assignment-7/header/header.component';
 @NgModule({
   declarations: [
     AppComponent,
-    PostCreateComponent,
-    HeaderComponent,
-    PostListComponent,
-    SignupComponent,
-    LoginComponent,
     AssignmentTwo,
     AssignmentThree,
-    ProductComponentComponent
+    ProductComponentAssignment4,
+    ProductComponentAssignment5,
+    ProductPageComponent,
+    AssignmentsComponent,
+    ProductPageAssignmentSix,
+    ProductComponentAssignmentSix,
+    ProductComponent,
+    ProductDetailsComponent,
+    AboutComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -52,7 +60,7 @@ import { ProductComponentComponent } from './assignments/assignment-4/product-co
     MatPaginatorModule,
     ModuleAModule
   ],
-  providers: [{provide:HTTP_INTERCEPTORS,useClass:AuthInterceptor,multi:true}],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

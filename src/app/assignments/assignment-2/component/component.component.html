@@ -1,5 +1,6 @@
 <form [formGroup]="form" (submit)="handleSubmit()" >
-
+  <fieldset>
+    <legend>Sign Up:</legend>
   <div class="form-control">
     <label for="email">Email</label>
     <input type="email" formControlName="email" />
@@ -30,10 +31,9 @@
   </div>
 
   <div class="form-control">
-      {{this.form.get('accept')?.value}}
     <input type="button" value="cancel" (click)="onCancel()"/>
     <input type="submit" name="cancel" value="submit" [disabled]="this.form.invalid || this.form.get('accept')?.value === false" />
   </div>
-
+  </fieldset>
 
 </form>

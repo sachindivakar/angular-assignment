@@ -1,3 +1,4 @@
-<ul [@listAnimation]="items.length">
-  <li *ngFor="let item of items">{{ item }}</li>
+
+<ul>
+  <li *ngFor="let item of items; let i = index" [@enterLeave]="{ value: 'enter', params: { delay: i * 1000 } }">{{ item }}</li>
 </ul>

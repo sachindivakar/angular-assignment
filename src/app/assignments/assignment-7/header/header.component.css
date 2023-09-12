@@ -1,0 +1,31 @@
+
+ul{
+  padding:0;
+  margin:0
+}
+li{
+  list-style: none;
+  padding: 1rem;
+  font-size: 1.5rem;
+
+}
+a{
+  text-decoration: none;
+}
+
+ul{
+  display: flex;
+  flex-direction: row;
+
+}
+
+
+.is-active{
+  color:red;
+}
+
+
+div{
+  padding: 1rem;
+  width: 100%;
+}
